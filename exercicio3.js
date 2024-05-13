@@ -9,6 +9,7 @@ let totalPrice
 if (distance <= 200) {
   totalPrice = distance * 0.50
 } else {
-  totalPrice = distance * 0.45
+  totalPrice = 200 * 0.50
+  totalPrice += (distance - 200) * 0.45
 }
-console.log(`The total price of the travel will be ${totalPrice} reais`)
+console.log(`The total price of the travel will be ${totalPrice.toFixed(2)} reais`)

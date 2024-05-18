@@ -2,15 +2,15 @@
 quantidade de elementos negativos da linha correspondente de M. */
 
 function generateRandomMatrix(numRows, numColuns) {
-  const Matrix = []
+  const matrix = []
   for (let i = 0; i < numRows; i++) {
     const row = []
     for (let j = 0; j < numColuns; j++) {
       row.push(Math.floor(Math.random() * 101) - 50)
     }
-    Matrix.push(row)
+    matrix.push(row)
   }
-  return Matrix
+  return matrix
 }
 const M = generateRandomMatrix(6, 8)
 console.log(M)

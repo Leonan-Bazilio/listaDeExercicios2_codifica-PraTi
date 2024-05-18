@@ -15,8 +15,6 @@ function generateRandomMatrix(numRows, numColuns) {
   return Matrix
 }
 const M = generateRandomMatrix(12, 13)
-const A = 1
-let count = 0
 
 const X = M.map(row => {
   const higherNumber = Math.max(...row)

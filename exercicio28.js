@@ -4,15 +4,15 @@ a) a soma dos elementos acima da diagonal principal;
 b) a soma dos elementos abaixo da diagonal principal; */
 
 function generateRandomMatrix(numRows, numColuns) {
-  const Matrix = []
+  const matrix = []
   for (let i = 0; i < numRows; i++) {
     const row = []
     for (let j = 0; j < numColuns; j++) {
       row.push(Math.floor(Math.random() * 10))
     }
-    Matrix.push(row)
+    matrix.push(row)
   }
-  return Matrix
+  return matrix
 }
 const M = generateRandomMatrix(10, 10)
 let numbersAbove = ""

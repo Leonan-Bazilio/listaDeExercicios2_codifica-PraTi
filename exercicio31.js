@@ -3,15 +3,15 @@ Conte quantos valores iguais a A estão na matriz. Crie, a seguir, uma matriz X 
 todos os elementos de V diferentes de A. Mostre os resultados. */
 
 function generateRandomMatrix(numRows, numColuns) {
-  const Matrix = []
+  const matrix = []
   for (let i = 0; i < numRows; i++) {
     const row = []
     for (let j = 0; j < numColuns; j++) {
       row.push(Math.floor(Math.random() * 3))
     }
-    Matrix.push(row)
+    matrix.push(row)
   }
-  return Matrix
+  return matrix
 }
 const M = generateRandomMatrix(30, 30)
 const A = 1

@@ -18,9 +18,6 @@ const M = generateRandomMatrix(12, 13)
 const A = 1
 let count = 0
 
-Math.max(...M)
-
-
 const X = M.map(row => {
   const higherNumber = Math.max(...row)
   return row.map(num => parseFloat((num / higherNumber).toFixed(2)))
@@ -28,5 +25,5 @@ const X = M.map(row => {
 
 console.log(`Matrix M:`)
 console.log(M)
-console.log(`The matrix M without the number ${A} resulted in the matrix X:`)
+console.log(`The matrix M divided by the largest element of each row resulted in this matrix:`)
 console.log(X)

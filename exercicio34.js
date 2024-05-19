@@ -13,7 +13,7 @@ function generateRandomMatrix(numRows, numColuns) {
   }
   return matrix
 }
-const M = generateRandomMatrix(3, 3)
+const M = generateRandomMatrix(30, 30)
 const X = []
 
 for (let i = 0; i < M.length; i++) {

@@ -39,5 +39,5 @@ const X = M.map((row, i) => row.map((num, j) =>
 
 console.log(`Matrix M:`)
 console.log(M)
-console.log(`Mhe main diagonal of matrix M multiplied by the average of the secondary diagonal of matrix M results in: `)
+console.log(`The main diagonal of matrix M multiplied by the average of the secondary diagonal of matrix M results in: `)
 console.log(X)

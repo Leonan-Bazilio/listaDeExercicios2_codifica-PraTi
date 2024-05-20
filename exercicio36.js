@@ -25,19 +25,7 @@ const lotteryNumbers = generateLotteryNumbers(13)
 console.log(`The lucky numbers are: \n${lotteryNumbers}`)
 
 let winners = []
-for (let i = 1; i <= 100; i++) {
-  const betNumbers = generateLotteryNumbers(13)
-  //como pediu so o numero de acertor vou usar o reduce mesmo, se tivesse que dizer quais numeros eu usaria o filter
-  const matchCount = betNumbers.reduce((acc, current) => {
-    return lotteryNumbers.includes(current) ? acc + 1 : acc
-  }, 0)
-  if (matchCount === 13) {
-    winners.push(i)
-    console.log(`Congratulations player ${i}, you were the WINNER`)
-  } else {
-    console.log(`Not this time, player ${i}, you matched only ${matchCount} numbers.`)
-  }
-}
+
 
 if (winners.length > 0) {
   console.log(`\n\nThe players who won were the numbers: ${winners}`)

@@ -8,15 +8,10 @@ mensagem "Parabéns, tu foi o GANHADOR".
 
 function generateLotteryNumbers(size) {
   const lotteryNumbers = []
-  for (let j = 0; j < size; j++) {
-    while (true) {
-      //fiz essa parte para os numeros não se repetirem ja que é um "numero de loteria"
-      let num = Math.ceil(Math.random() * 60)
-      if (!lotteryNumbers.includes(num)) {
-        lotteryNumbers.push(num)
-        lotteryNumbers.sort((a, b) => a - b)
-        break
-      }
+  while (lotteryNumbers.length < size) {
+    let num = Math.ceil(Math.random() * 60)
+    if (!lotteryNumbers.includes(num)) {
+      lotteryNumbers.push(num)
     }
   }
   return lotteryNumbers
@@ -25,6 +20,16 @@ const lotteryNumbers = generateLotteryNumbers(13)
 console.log(`The lucky numbers are: \n${lotteryNumbers}`)
 
 let winners = []
+
+for (let i = 1; i <= 100; i++) {
+  const bet = generateLotteryNumbers(13)
+  const matches = bet.filter(num => lotteryNumbers.includes(num))
+  console.log(`Bettor ${i} you matched ${matches.length} numbers (${matches})`)
+  if (matches.length == 13) {
+    console.log("Congratulations you are the winner")
+    winners.push(i)
+  }
+}
 
 
 if (winners.length > 0) {
